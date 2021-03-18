@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remu Ollinen - aspiring web developer</title>
+    <link rel = "stylesheet" type = "text/css" href = "styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+    
+    <header>
+        <nav class="navbar">
+            <div>
+                <h1 class="logo">Remu Ollinen</h1>
+            </div>
+            <div class="nav-links">
+                <ul class="nav-link-list">
+                    <li>
+                        <a href="#intro" id="intro" class="nav-link">Intro</a>
+                    </li>
+                    <li>
+                        <a href="#projects" id="projects" class="nav-link">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#contact" id="nav-contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+    
+        <section id="intro" class="section">
+            <div class="introduction">
+                <h1>Hi, I'm Remu</h1>
+                <p><i>an aspiring web developer</i></p>
+            </div>
+            <img id="intro-img" src="./img/portfolio-img.jpg" alt="Remu Ollinen laying down with a floating coffee cup">
+        </section>
+    
+        <section id="projects" class="section">
+            <div class="project-header-container">
+                <h2 class="project-header">Projects</h2>
+                <p class="project-header-desc"><i>a collection of my projects</i></p>
+            </div>
+            <div class="project-grid">
+                <div id="project__1" class="project-tile">
+                    <div>
+                        <h3 class="project-name">Nenillo Photography</h3>
+                        <a href="https://nenillophotography.netlify.app/" class="project-link" target="_blank">Website</a>
+                        <a href="https://github.com/remuollinen/nenillo-photography" class="project-link"   target="_blank">Code</a>
+                    </div>
+                </div>
+                <div id="project__2" class="project-tile">
+                    <h3 class="project-name">Project pending</h3>
+                </div>
+                <div id="project__3" class="project-tile">
+                    <h3 class="project-name">Project pending</h3>
+                </div>
+                <div id="project__4" class="project-tile">
+                    <h3 class="project-name">Project pending</h3>
+                </div>
+            </div>
+        </section>
+    
+        <section id="contact" class="section">
+            <div class="contact-header">
+                <h2>Contact</h2>
+                <p><i>Check out my profiles or send me an email!</i></p>
+            </div>
+            <div class="contact-link-wrapper">
+                <ul class="contact-list">
+                    <li class="contact-list-item">
+                        <a class="contact-link" href="https://github.com/remuollinen" target="_blank">
+                            <img id="github" class="contact-icon" src="./img/github_icon.png" alt="GitHub icon">
+                                <br>GitHub</br>
+                        </a>
+                    </li>
+                    <li class="contact-list-item">
+                        <a class="contact-link" href="https://www.linkedin.com/in/remu-ollinen/" target="_blank">
+                            <img id="linkedin" class="contact-icon" src="./img/linkedin_icon.png" alt="LinkedIn icon">
+                                <br>LinkedIn</br>
+                        </a>
+                    </li>
+                    <li class="contact-list-item">
+                        <a class="contact-link" href="mailto:remu.ollinen@gmail.com">
+                            <img id="email" class="contact-icon" src="./img/email_icon.png" alt="Email icon">
+                                <br>Email</br>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    
+    </main>
+    
+    <footer>
+        <p class="copy">&copy 2021 Remu Ollinen</p>
+    </footer>
+    
+</body>
+</html>
