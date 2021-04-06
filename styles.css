@@ -252,7 +252,12 @@ footer .social-icon {
   filter: invert(95%);
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 667px) {
+  .section {
+    min-height: 50vh;
+    margin: 5% 2%;
+  }
+
   .about-wrapper {
     padding: 0;
   }
@@ -284,7 +289,7 @@ footer .social-icon {
   }
 
   .social-icon {
-    height: 1rem;
-    width: 1rem;
+    height: 1.5rem;
+    width: 1.5rem;
   }
 } ;
