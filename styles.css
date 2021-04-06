@@ -44,38 +44,18 @@ nav {
 
 .logo {
   color: var(--primary);
-  font-size: 1rem;
+  font-size: 1.3rem;
   text-decoration: none;
 }
 
 .logo h1 {
-  padding: 3px 10px;
+  padding: 0px 20px;
   border: 2px solid var(--primary);
   transition: 0.3s ease-in-out;
 }
 
 .logo:hover h1 {
   border: 2px solid var(--highlight);
-}
-
-.nav-links {
-  display: flex;
-  justify-content: space-around;
-  width: 30%;
-  list-style: none;
-}
-
-.nav-link {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: var(--primary);
-  padding: 2px 6px;
-  border-bottom: 2px transparent;
-  transition: all 0.3s ease-in-out;
-}
-
-.nav-link:hover {
-  border-bottom: 2px solid var(--highlight);
 }
 
 /* INTRO SECTION */
@@ -113,6 +93,7 @@ nav {
 
 .intro-text p {
   font-size: 1.5rem;
+  color: var(--primary);
 }
 
 .section {
@@ -122,12 +103,26 @@ nav {
 
 /* ABOUT */
 
-.contact-icon {
-  height: 3rem;
-  width: 3rem;
+.about-wrapper {
+  padding: 0 5rem;
+}
+
+.tech {
+  font-size: 1.5rem;
+  padding: 10px;
+  background-color: var(--secondary);
+  color: var(--primary);
+  border-radius: 50px;
 }
 
 /* PROJECTS */
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .project-grid {
   display: grid;
@@ -136,49 +131,92 @@ nav {
 }
 
 .project-tile {
-  background-color: var(--secondary);
   height: 400px;
+  max-width: 500px;
   display: flex;
   justify-content: center;
   position: relative;
 }
 
-.project-tile h3,
-.project-tile a {
+.project-tile img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.project-text {
+  width: 250px;
   font-size: 1.2rem;
   color: var(--primary);
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
 }
 
-.project-tile a {
-  padding: 1rem 2rem;
-  text-decoration: none;
-}
-
-.project-tile h3 {
+.project-text a {
   text-align: center;
-  margin: 20px 0;
+  padding: 0.4rem;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  box-shadow: 2px 2px 10px var(--secondary);
+  transition: all 0.3s ease-out;
 }
 
-#project1 {
-  background-image: url(/img/project-thumbnails/nenillo-photography-thumbnail.PNG);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  filter: brightness(0.3);
+.project-text h3 {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 1.6rem;
+  text-shadow: 5px 5px 10px var(--secondary);
 }
 
-#project2 {
-  background-image: url(/img/project-thumbnails/cottage-vacation-thumbnail.PNG);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  filter: brightness(0.3);
+.project-tile:hover .project-text {
+  opacity: 1;
+}
+
+.project-text a:hover {
+  border: 2px solid var(--highlight);
+  background-color: var(--secondary);
+}
+
+/* CONTACT */
+
+.contact-link-wrapper {
+  margin: 5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+}
+
+.contact-list-item {
+  margin: 0 2rem;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: var(--secondary);
+}
+
+.contact-icon {
+  height: 4rem;
+  width: 4rem;
 }
 
 /* FOOTER */
 
 footer {
   height: 15vh;
+  width: 100%;
   background-color: var(--secondary);
   display: flex;
   justify-content: space-around;
@@ -213,3 +251,40 @@ footer .social-icon {
   width: 100%;
   filter: invert(95%);
 }
+
+@media screen and (max-width: 500px) {
+  .about-wrapper {
+    padding: 0;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+
+  .project-tile {
+    width: 100%;
+  }
+
+  .project-tile img {
+    object-fit: cover;
+  }
+
+  .project-text {
+    opacity: 1;
+  }
+
+  .contact-icon {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .copy p {
+    font-size: 1rem;
+  }
+
+  .social-icon {
+    height: 1rem;
+    width: 1rem;
+  }
+} ;
